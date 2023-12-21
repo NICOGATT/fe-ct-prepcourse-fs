@@ -9,7 +9,7 @@ function productoEntreNúmeros(a, b) {
   for (let i = a; i <= b; i++) {
       producto *= i;
   }
-  return producto; 
+  return Object.is(producto, -0) ? 0 : producto; 
 }
 
 module.exports = productoEntreNúmeros;
